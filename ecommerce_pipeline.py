@@ -17,7 +17,7 @@ orders_url="https://raw.githubusercontent.com/elreddy/E-commerce_Data_Pipeline/r
 ## Defining dag arguments
 
 default_arguments= {
-    "owner": "lokesh",
+    "owner": "your name",
     "start_date": datetime(2025,2,9)
 }
 
@@ -38,8 +38,8 @@ dag= DAG(
 Extract_Customer_File= BashOperator(
     task_id="extract_customer_file",
     bash_command= f"""
-                    wget -O /home/lokesh/SourceInputDir/E_Commerce_Data/customers.csv {customer_url}
-                    chmod 644 /home/lokesh/SourceInputDir/E_Commerce_Data/customers.csv
+                    wget -O /home/<user>/SourceInputDir/E_Commerce_Data/customers.csv {customer_url}
+                    chmod 644 /home/<user>/SourceInputDir/E_Commerce_Data/customers.csv
                     """,
     dag= dag
 )
@@ -49,8 +49,8 @@ Extract_Customer_File= BashOperator(
 Extract_Orders_File= BashOperator(
     task_id="extract_orders_file",
     bash_command= f"""
-                      wget -O /home/lokesh/SourceInputDir/E_Commerce_Data/orders.csv {orders_url}
-                      chmod 644 /home/lokesh/SourceInputDir/E_Commerce_Data/orders.csv
+                      wget -O /home/<user>/SourceInputDir/E_Commerce_Data/orders.csv {orders_url}
+                      chmod 644 /home/<user>/SourceInputDir/E_Commerce_Data/orders.csv
                       """,
     dag= dag
 )
@@ -61,7 +61,7 @@ mysql_command= """
 mysql --defaults-extra-file=~/.my.cnf <<EOF
 use airflow_pipeline; 
 CREATE TABLE IF NOT EXISTS customers(customer_id INT PRIMARY KEY, customer_name varchar(50), email varchar(50), city varchar(30));
-LOAD DATA LOCAL INFILE '/home/lokesh/SourceInputDir/E_Commerce_Data/customers.csv'
+LOAD DATA LOCAL INFILE '/home/<user>/SourceInputDir/E_Commerce_Data/customers.csv'
 INTO TABLE customers
 FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\\n'
@@ -80,7 +80,7 @@ Loading_Customer_Data= BashOperator(
 psql_command= """
 psql -U airflow_user -d airflow_pipeline -v ON_ERROR_STOP=1 -c "
 CREATE TABLE IF NOT EXISTS orders(order_id INT PRIMARY KEY , customer_id INT, order_date DATE, customer_amount FLOAT);"
-psql -U airflow_user -d airflow_pipeline -c "\COPY orders FROM '/home/lokesh/SourceInputDir/E_Commerce_Data/orders.csv' with (FORMAT csv, HEADER true);"
+psql -U airflow_user -d airflow_pipeline -c "\COPY orders FROM '/home/<user>/SourceInputDir/E_Commerce_Data/orders.csv' with (FORMAT csv, HEADER true);"
 """
 
 Loading_Orders_Data= BashOperator(
@@ -95,8 +95,8 @@ Loading_Orders_Data= BashOperator(
 Moving_files_ProcessedDirectory= BashOperator(
     task_id= "Moving_files_otherDirectory",
     bash_command= """
-                     mv /home/lokesh/SourceInputDir/E_Commerce_Data/customers.csv /home/lokesh/SourceInputDir/E_Commerce_Data/Processed_files
-                     mv /home/lokesh/SourceInputDir/E_Commerce_Data/orders.csv /home/lokesh/SourceInputDir/E_Commerce_Data/Processed_files
+                     mv /home/<user>/SourceInputDir/E_Commerce_Data/customers.csv /home/<user>/SourceInputDir/E_Commerce_Data/Processed_files
+                     mv /home/<user>/SourceInputDir/E_Commerce_Data/orders.csv /home/<user>/SourceInputDir/E_Commerce_Data/Processed_files
                      """,
     dag= dag
 )
@@ -152,7 +152,7 @@ def extract_customers_orders_data():
         customers_orders_df = pd.read_sql(query, conn)
         logging.info(f"Retrieved {len(customers_orders_df)} records from customers_orders table.")
 
-        customers_orders_df.to_csv(f"/home/lokesh/OutputDir/E_Commerce_Data/customers_orders_{date.today()}.csv", index=False)
+        customers_orders_df.to_csv(f"/home/<user>/OutputDir/E_Commerce_Data/customers_orders_{date.today()}.csv", index=False)
         logging.info("Data extracted successfully and saved in csv file.")
         
     except Exception as e:
