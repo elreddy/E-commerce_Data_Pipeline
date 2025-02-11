@@ -48,16 +48,21 @@ Before setting up the data pipeline, ensure that the following tools are install
 - **Apache Airflow**
    - *Check Installation:*  
      ```bash
-        airflow version
+     airflow version
 - **MySQL**
    - *Check Installation:*
      ```bash
-        mysql --version
+     mysql --version
 - **PostgreSQL**
    - *Check Installation:*
      ```bash
-        psql --version
-If not installed kindly refer the resources section below and do the required installations.
+     psql --version
+- **Python**
+   - *Check Installation:*  
+     ```bash
+     python --version
+     
+If not installed, please refer to the Resources section below for installation instructions and complete the required setup
 
 ## Airflow : 
 
