@@ -42,6 +42,23 @@ This repository contains two datasets used for building a data pipeline: [Reposi
    - Detailed logs for tracking execution steps.
    - Airflow UI for DAG execution monitoring.
 
+## Prerequisites :
+
+Before setting up the data pipeline, ensure that the following tools are installed and ready to use:
+- **Apache Airflow**
+   - *Check Installation:*  
+     ```bash
+        airflow version
+- **MySQL**
+   - *Check Installation:*
+     ```bash
+        mysql --version
+- **PostgreSQL**
+   - *Check Installation:*
+     ```bash
+        psql --version
+If not installed kindly refer the resources section below and do the required installations.
+
 ## Airflow : 
 
  - Data Pipeline Code : [Dag_script](ecommerce_pipeline.py)
@@ -56,9 +73,50 @@ This repository contains two datasets used for building a data pipeline: [Reposi
     - apache-airflow-providers-mysql
     - pandas
       
- - Create Airflow Connections : [Airflow_Instructions](Airflow_Connections.docx)
+ - Required Connections : [Airflow_Instructions](Airflow_Connections.docx)
 
-## Environment setup : [Instructions](Linux_Environment_Setup.docx)
+## Environment setup : 
+
+Kindly refer to the instructions below and complete the required setup to initialize the data pipeline.
+
+ - [Instructions](Linux_Environment_Setup.docx)
+
+## Challenges & Solutions :
+
+During the development of this data pipeline, several challenges were encountered. Kindly refer to the document below for common issues and their solutions.
+
+ - [Details](Common_Issues.docx)
+
+## Resources & Downloads
+
+Below are the official download links for the tools used in this project:
+
+- **Apache Airflow**
+  - *Installation Guide*: [https://airflow.apache.org/docs/apache-airflow/stable/installation/index.html](https://airflow.apache.org/docs/apache-airflow/stable/installation/index.html)
+  - *GitHub Repository*: [https://github.com/apache/airflow](https://github.com/apache/airflow)
+
+- **MySQL**
+  - *Download MySQL*: [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
+  - *Official Documentation*: [https://dev.mysql.com/doc/](https://dev.mysql.com/doc/)
+
+- **PostgreSQL**
+  - *Download PostgreSQL*: [https://www.postgresql.org/download/](https://www.postgresql.org/download/)
+  - *Official Documentation*: [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)
+
+- **MySQL FDW for PostgreSQL**
+  - *Installation Guide*: [https://wiki.postgresql.org/wiki/Foreign_data_wrappers#MySQL](https://wiki.postgresql.org/wiki/Foreign_data_wrappers#MySQL)
+
+- **pgAdmin 4 (PostgreSQL Management Tool)**
+  - *Download pgAdmin*: [https://www.pgadmin.org/download/](https://www.pgadmin.org/download/)
+
+- **Python**
+  - *Download Python*: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+
+- **Pandas (Python Library for Data Processing)**
+   - *Installation Guide*: [https://pandas.pydata.org/docs/getting_started/install.html](https://pandas.pydata.org/docs/getting_started/install.html)
+     
+- **Lucidchart (For Diagram Creation)**
+   - *Lucidchart Website*: [https://www.lucidchart.com/](https://www.lucidchart.com/)
 
 ## Future Enhancements
 
