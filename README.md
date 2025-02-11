@@ -117,14 +117,16 @@ Below are the official download links for the tools used in this project:
      
 - **Lucidchart (For Diagram Creation)**
    - *Lucidchart Website*: [https://www.lucidchart.com/](https://www.lucidchart.com/)
-
-## Future Enhancements
-
-- Automate deployment using **GitHub Actions (CI/CD)**.
-- Migrate to **Cloud Platforms (AWS/Azure Data Services)**.
-- Optimize transformations with **Apache Spark**.
-
 ---
 
-📢 **Author**: Lokesh | 🔗 [LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
+## About Me  
+
+I am a passionate **Data Engineer** with expertise in **SQL, Python, Apache Airflow, PostgreSQL, MySQL, and Big Data technologies**.  
+I have built **scalable data pipelines** for efficient data processing and transformation.  
+
+🔹 **Skills:** Linux/Shell | SQL | Python | Apache Airflow | PostgreSQL | MySQL | Apache Spark | Kafka  
+🔹 **Career Goal:** To work as a **Data Engineer** and contribute to designing robust data architectures.  
+
+📧 **Email:** elokesh4292@gmail.com  
+🔗 **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/eegapuri-lokeshwar-reddy-281327308)  
 
