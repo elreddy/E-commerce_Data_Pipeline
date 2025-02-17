@@ -11,8 +11,8 @@ import logging
 
 ## Defining file URLs
 
-customer_url="https://github.com/elreddy/E-commerce_Data_Pipeline/blob/main/Dataset/customers.csv"
-orders_url="https://github.com/elreddy/E-commerce_Data_Pipeline/blob/main/Dataset/orders.csv"
+customer_url="https://raw.githubusercontent.com/elreddy/E-commerce_Data_Pipeline/refs/heads/main/Dataset/customers.csv"
+orders_url="https://raw.githubusercontent.com/elreddy/E-commerce_Data_Pipeline/refs/heads/main/Dataset/orders.csv"
 
 ## Defining dag arguments
 
