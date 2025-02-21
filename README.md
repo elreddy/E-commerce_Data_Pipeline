@@ -126,10 +126,10 @@ Below are the official download links for the tools used in this project:
 
 ## About Me  
 
-I am a passionate **Data Engineer** with expertise in **SQL, Python, Apache Airflow, PostgreSQL, MySQL, and Big Data technologies**.  
+I am a passionate **Data Engineer** with expertise in **SQL, Python, Apache Airflow, PostgreSQL, and Big Data technologies**.  
 I have built **scalable data pipelines** for efficient data processing and transformation.  
 
-**Skills:** Linux/Shell | SQL | Python | Apache Airflow | PostgreSQL | MySQL | Apache Spark | Kafka  
+**Skills:** Linux/Shell | SQL | Python | Apache Airflow | PostgreSQL | Apache Spark | Kafka  
 **Career Goal:** To work as a **Data Engineer** and contribute to designing robust data architectures.  
 
 📧 **Email:** elokesh4292@gmail.com  
